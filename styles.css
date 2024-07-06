@@ -1,0 +1,61 @@
+.bg-aliceblue {
+    background-color: aliceblue;
+}
+
+.bg-cover {
+    background-size: cover;
+}
+
+.bg-center {
+    background-position: center;
+}
+
+.bg-no-repeat {
+    background-repeat: no-repeat;
+}
+
+.bg-white-20 {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.h-600 {
+    height: 600px;
+}
+
+.rounded-6 {
+    border-radius: 6px;
+}
+
+@media (max-width: 576px) {
+    .responsive-text {
+        font-size: 12px;
+    }
+    .hlink {
+        margin-right: 10px;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    .responsive-text {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 769px) {
+    .responsive-text {
+        font-size: 16px;
+    }
+}
+
+.text-sm-12px {
+    font-size: 12px;
+}
+
+.text-md-14px {
+    font-size: 14px;
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+}
