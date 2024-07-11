@@ -53,9 +53,20 @@
 }
 
 .section-3 .custom-div {
-    height: 400px;
+    height: 500px;
+    object-fit: cover;
 }
 
 .section-3 .custom-sm-div {
-    height: 150px;
+    height: 190px;
+    object-fit: cover;
+}
+
+/* Add margin to h6 and p elements within .section-3 */
+.section-3 h6 {
+    margin-bottom: 0.5rem; /* Adjust as needed */
+}
+
+.section-3 p {
+    margin-bottom: 0.5rem; /* Adjust as needed */
 }
