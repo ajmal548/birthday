@@ -62,11 +62,10 @@
     height: 190px;
 }
 
-/* Add margin to h6 and p elements within .section-3 */
 .section-3 h6 {
-    margin-bottom: 0.5rem; /* Adjust as needed */
+    margin-bottom: 0.5rem; 
 }
 
 .section-3 p {
-    margin-bottom: 0.5rem; /* Adjust as needed */
+    margin-bottom: 0.5rem; 
 }
