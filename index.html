@@ -5,11 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/bootstrap.css">
-<<<<<<< HEAD
     <link rel="stylesheet" href="./styles.css">
-=======
-    <link rel="stylesheet" href="/styles.css">
->>>>>>> 7a51548a0021f7d99f2d6d72a1880e2c11f7b85c
     <title>Birthday Store</title>
 </head>
 
@@ -27,7 +23,7 @@
                         <li class="nav-item"><a class="nav-link" href="#">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
                         <li class="nav-item">
-                            <button class="btn btn-dark btn-sm ml-3" type="button">Button</button>
+                            <button class="btn btn-dark btn-xs ml-3" type="button">Button</button>
                         </li>
                     </ul>
                 </div>
@@ -35,7 +31,7 @@
         </header>
 
         <div class="section-1 mb-5 bg-cover bg-center bg-no-repeat rounded-6 position-relative w-100 h-600" style="background-image: url('/img/melon.jpeg');">
-            <div class="overlay position-absolute top-0 left-0 w-100 h-100 d-flex justify-content-center align-items-center text-white">
+            <div class="overlay position-absolute top-0 left-0 w-100 h-100 d-flex justify-content-center align-items-center text-white section-img">
                 <div class="text-center responsive-text">
                     <h2>Shop title</h2>
                     <p>Subheading with description of your Shopping Site</p>
@@ -132,7 +128,7 @@
 
         function generateProductHTML(product) {
             return `
-                <div class="col-sm-6 col-md-4 p-3">
+                <div class="col-6 col-md-4 p-3">
                     <img src="${product.image}" alt="${product.name}" class="product-image rounded w-100 mb-3">
                     <h6>${product.name}</h6>
                     <p>${product.description}</p>
