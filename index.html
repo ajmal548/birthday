@@ -15,7 +15,8 @@
         <div id="header"></div>
 
         <div class="section-1 mt-3 position-relative w-100" style="background-image: url('./img/melon.jpeg');">
-            <div class="overlay position-absolute top-0 left-0 w-100 h-100 d-flex justify-content-center align-items-center text-white">
+            <div
+                class="overlay position-absolute top-0 left-0 w-100 h-100 d-flex justify-content-center align-items-center text-white">
                 <div class="text-center responsive-text">
                     <h1>Shop title</h1>
                     <p>Subheading with description of your Shopping Site</p>
@@ -63,7 +64,7 @@
             </div>
         </div>
 
-        <footer class="py-4 border-top">
+        <footer class=" border-top">
             <div class="row">
                 <div class="col-sm-6 d-flex flex-column justify-content-between">
                     <h4>Site Name</h4>
@@ -77,22 +78,22 @@
                 <div class="col-sm-6">
                     <div class="row">
                         <div class="col-sm-4 sm-2">
-                            <h6 class="mb-4">Topic</h6>
-                            <p class="mt-3">Page</p>
-                            <p  class="mt-3">Page</p>
-                            <p  class="mt-3">Page</p>
+                            <h6 class="mb-5">Topic</h6>
+                            <p class="mt-4">Page</p>
+                            <p class="mt-4">Page</p>
+                            <p class="mt-4">Page</p>
                         </div>
                         <div class="col-sm-4 sm-2">
-                            <h6 class="mb-4">Topic</h6>
-                            <p class="mt-3">Page</p>
-                            <p  class="mt-3">Page</p>
-                            <p  class="mt-3">Page</p>
+                            <h6 class="mb-5">Topic</h6>
+                            <p class="mt-4">Page</p>
+                            <p class="mt-4">Page</p>
+                            <p class="mt-4">Page</p>
                         </div>
                         <div class="col-sm-4 sm-2">
-                            <h6 class="mb-4">Topic</h6>
-                            <p class="mt-3">Page</p>
-                            <p  class="mt-3">Page</p>
-                            <p  class="mt-3">Page</p>
+                            <h6 class="mb-5">Topic</h6>
+                            <p class="mt-4">Page</p>
+                            <p class="mt-4">Page</p>
+                            <p class="mt-4">Page</p>
                         </div>
                     </div>
                 </div>
@@ -100,42 +101,62 @@
         </footer>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
     <script src="/js/bootstrap.js"></script>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function () {
             fetch('./header.html')
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById('header').innerHTML = data;
+                    initializeNav();
                 });
 
-            const products = [
-                { name: 'Product 1', description: 'Description 1', price: '$10', image: './img/melon.jpeg' },
-                { name: 'Product 2', description: 'Description 2', price: '$20', image: './img/melon.jpeg' },
-                { name: 'Product 3', description: 'Description 3', price: '$30', image: './img/melon.jpeg' },
-                { name: 'Product 4', description: 'Description 4', price: '$40', image: './img/melon.jpeg' },
-                { name: 'Product 5', description: 'Description 5', price: '$10', image: './img/melon.jpeg' },
-                { name: 'Product 6', description: 'Description 6', price: '$50', image: './img/melon.jpeg' },
-            ];
+            function initializeNav() {
+                const navbarToggler = document.getElementById('navbar-toggler');
+                const sideNav = document.getElementById('mySidenav');
 
-            function generateProductHTML(product) {
-                return `
-                    <div class="col-6 col-md-4 p-3">
-                        <img src="${product.image}" alt="${product.name}" class="product-image rounded mb-3">
-                        <h4>${product.name}</h4>
-                        <p>${product.description}</p>
-                        <h5>${product.price}</h5>
-                    </div>
-                `;
+                navbarToggler.addEventListener('click', function () {
+                    sideNav.classList.toggle('show');
+                });
+
+                document.querySelector('.closebtn').addEventListener('click', function () {
+                    sideNav.classList.remove('show');
+                });
             }
+        });
 
-            const productListDiv = document.getElementById('product-list');
-            products.forEach(product => {
-                productListDiv.innerHTML += generateProductHTML(product);
-            });
+        // Product generation script (mock data)
+        const products = [
+            { name: 'Product 1', description: 'Description 1', price: '$10', image: './img/melon.jpeg' },
+            { name: 'Product 2', description: 'Description 2', price: '$20', image: './img/melon.jpeg' },
+            { name: 'Product 3', description: 'Description 3', price: '$30', image: './img/melon.jpeg' },
+            { name: 'Product 4', description: 'Description 4', price: '$40', image: './img/melon.jpeg' },
+            { name: 'Product 5', description: 'Description 5', price: '$10', image: './img/melon.jpeg' },
+            { name: 'Product 6', description: 'Description 6', price: '$50', image: './img/melon.jpeg' },
+        ];
+
+        function generateProductHTML(product) {
+            return `
+        <div class="col-6 col-md-4 p-3">
+            <img src="${product.image}" alt="${product.name}" class="product-image rounded mb-3">
+            <h4>${product.name}</h4>
+            <p>${product.description}</p>
+            <h5>${product.price}</h5>
+        </div>
+    `;
+        }
+
+        const productListDiv = document.getElementById('product-list');
+        products.forEach(product => {
+            productListDiv.innerHTML += generateProductHTML(product);
         });
     </script>
+
 </body>
 
 </html>
