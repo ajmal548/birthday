@@ -18,7 +18,7 @@
 
 @media (max-width: 576px) {
     .section-1{
-        height:500px ;
+        height:450px ;
     }
     .responsive-text {
         font-size: 12px;
@@ -69,7 +69,7 @@
 
 @media (max-width: 576px) {
     .section-3 .custom-div {
-        height: 500px;
+        height: 400px;
     }
     .section-3 .custom-sm-div {
         height: 190px;
