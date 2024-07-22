@@ -142,3 +142,13 @@ footer a {
     border: none;
     outline: none;
 }
+.carousel-indicators li {
+    background-color: white;
+}
+
+@media (min-width: 577px){
+    .carousel-indicators{
+        position: absolute;
+        margin-bottom: 100px;
+    }
+}
